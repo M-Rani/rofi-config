@@ -1,0 +1,109 @@
+@theme "/dev/null"
+
+* {
+  /* SETTINGS */
+  highlight:                    bold;
+  scrollbar:                    false;
+
+  background-color:             #000000;
+  border:                       0;
+  margin:                       0;
+  padding:                      0;
+  spacing:                      0;
+
+  vertical-align: 0.5;
+}
+
+configuration {
+  font:                         "Terminus 9";
+  expand:                       false;
+  show-icons:                   false;
+
+  display-drun:                 "$";
+  display-run:                  "!";
+  display-window:               "#";
+  display-ssh:                  "@";
+
+  disable-history:              false;
+  sidebar-mode:                 true;
+  levenshtein-sort:             true;
+}
+
+#window {
+  location:                       north;
+  anchor:                         north;
+  width:                          100%;
+  padding:                        0px;
+  border:                         0px;
+}
+
+#mainbox {
+  background-color:               #181818;
+  children:                       [inputbar, listview];
+}
+
+#message {
+  border: 1px dash 0px 0px;
+  padding: 1px;
+}
+
+#listview {
+  padding:                        0;
+  background-color:               #000000;
+  columns:                        1;
+  lines:                          9;
+
+  border:                         1 0 1 0;
+  border-color:                   #181818;
+}
+
+#element {
+  padding:                        0.6em 1.0em;
+  text-color:                     #A1A1A1;
+}
+
+#element.selected {
+  background-color:               #181818;
+  text-color:                     #FFFFFF;
+}
+
+#element-icon {
+  size:                           0;
+}
+
+#case-indicator {
+    spacing:    0;
+}
+
+#entry {
+  width:                          10em;
+  padding:                        0.6em 0.4em;
+
+  placeholder:                    "";
+  placeholder-color:              #414141;
+
+  background-color:               #000000;
+  text-color:                     #FFFFFF;
+}
+
+inputbar {
+  children:                       [prompt, entry];
+}
+
+#prompt {
+  enabled:                        true;
+  padding:                        0.6em 0.9em;
+  background-color:               #181818;
+  text-color:                     #FFFFFF;
+
+  border: 0 1 0 1;
+  border-color: #181818;
+}
+
+element-text {
+  background-color:               inherit;
+  text-color:                     inherit;
+}
+
+
+/* vim: ft=sass

@@ -1,0 +1,96 @@
+@theme "/dev/null"
+
+* {
+  /* SETTINGS */
+  highlight:                    bold;
+  scrollbar:                    false;
+
+  background-color:             #000000;
+  border:                       0;
+  margin:                       0;
+  padding:                      0;
+  spacing:                      0;
+
+  vertical-align: 0.5;
+}
+
+configuration {
+  font:                         "Terminus 9";
+  expand:                       false;
+  show-icons:                   false;
+
+  display-drun:                 "$";
+  display-run:                  "!";
+  display-window:               "#";
+  display-ssh:                  "@";
+
+  disable-history:              false;
+  sidebar-mode:                 true;
+  levenshtein-sort:             true;
+}
+
+window {
+  location:                       north;
+  anchor:                         north;
+  width:                          100%;
+  height:                         30px;
+}
+
+element {
+  padding:                        8.5 10;
+  text-color:                     #A1A1A1;
+}
+
+element selected {
+  background-color:               #181818;
+  text-color:                     #FFFFFF;
+}
+
+element-text {
+  background-color:               inherit;
+  text-color:                     inherit;
+}
+
+element-icon {
+  size:                           0;
+}
+
+entry {
+  width:                          10em;
+  padding:                        0.6em 0.4em;
+  height:                         28px;
+
+  placeholder:                    " Type to search... ";
+  placeholder-color:              #414141;
+
+  background-color:               #000000;
+  text-color:                     #FFFFFF;
+}
+
+inputbar {
+  children:                       [prompt, entry];
+}
+
+listview {
+  layout:                         horizontal;
+  padding:                        0;
+  background-color:               #000000;
+  columns:                        1;
+  lines:                          99;
+}
+
+mainbox {
+  orientation:                    horizontal;
+  background-color:               #181818;
+  children:                       [inputbar, listview];
+}
+
+prompt {
+  enabled:                        true;
+  padding:                        0.6em 0.9em;
+  background-color:               #181818;
+  text-color:                     #414141;
+
+}
+
+/* vim: ft=sass
